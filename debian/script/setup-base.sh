@@ -7,7 +7,7 @@ VAGRANT_KEY_URL='https://raw.githubusercontent.com/mitchellh/vagrant/master/keys
 
 # installing packages
 echo "Installing Packages"
-sudo apt-get install -y build-essential aptitude curl git perl libssl-dev dkms linux-headers-`uname -r`
+sudo apt-get install -y build-essential curl git perl libssl-dev dkms linux-headers-`uname -r`
 
 # installing vagrant keys
 echo "Installing Vagrant User Keys"
