@@ -20,17 +20,12 @@ sudo yum clean all
 sudo yum check-update
 sudo yum update -y
 echo "Installing Packages"
-sudo yum install -y gcc make perl kernel-headers kernel-devel curl wget git
+sudo yum install -y gcc make perl kernel-headers kernel-devel curl wget git epel-release
 sudo yum groupinstall -y 'Development tools'
 
-# installing dkms packages from epel
-sudo sh -c 'echo "[epel]" >> /etc/yum.repos.d/epel.repo'
-sudo sh -c 'echo "name=EPEL Packages for Enterprise Linux 7 - \$basearch" >> /etc/yum.repos.d/epel.repo'
-sudo sh -c 'echo "baseurl=http://dl.fedoraproject.org/pub/epel/beta/7/\$basearch" >> /etc/yum.repos.d/epel.repo'
-sudo sh -c 'echo "enabled=0" >> /etc/yum.repos.d/epel.repo'
-sudo sh -c 'echo "gpgcheck=0" >> /etc/yum.repos.d/epel.repo'
+# installing packages from epel
+sudo yum clean all
 sudo yum --enablerepo=epel install -y dkms
-sudo rm /etc/yum.repos.d/epel.repo
 
 # installing vagrant keys
 echo "Installing Vagrant User Keys"
