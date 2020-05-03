@@ -9,7 +9,7 @@ VAGRANT_KEY_URL='https://raw.githubusercontent.com/mitchellh/vagrant/master/keys
 echo "APT update"
 sudo apt-get -y update && sudo apt-get -y upgrade
 echo "Installing Packages"
-sudo apt-get install -y build-essential curl wget git perl libssl-dev dkms linux-image-amd64 linux-headers-`uname -r`
+sudo apt-get install -y build-essential curl wget git perl debconf-utils libssl-dev dkms linux-image-amd64 linux-headers-`uname -r`
 
 # installing vagrant keys
 echo "Installing Vagrant User Keys"
