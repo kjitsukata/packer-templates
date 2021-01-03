@@ -23,3 +23,6 @@ mkdir -pm 700 ${VAGRANT_HOME}/.ssh
 wget --no-check-certificate ${VAGRANT_KEY_URL} -O ${VAGRANT_HOME}/.ssh/authorized_keys
 chmod 600 ${VAGRANT_HOME}/.ssh/authorized_keys
 chown -R ${VAGRANT_USER}:${VAGRANT_GROUP} ${VAGRANT_HOME}/.ssh
+
+# change shell for vagrant user
+sudo /bin/chsh -s /bin/zsh vagrant

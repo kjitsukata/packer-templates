@@ -48,6 +48,11 @@
         "./script/setup-base.sh",
         "./script/install-virtualbox-guest-additions.sh"
       ]
+    },
+    {
+      "type": "file",
+      "source": "config/home/vagrant/",
+      "destination": "/home/vagrant"
     }
   ],
   "post-processors": [
