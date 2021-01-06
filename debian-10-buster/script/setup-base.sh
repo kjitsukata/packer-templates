@@ -30,3 +30,7 @@ sudo /bin/chsh -s /bin/zsh vagrant
 # install Oh-My-Zsh and Powerlevel10k for vagrant user
 sudo -u vagrant sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo -u vagrant git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# add os logo to /etc/motd
+sudo sh -c "echo '' | tee -a /etc/motd"
+sudo sh -c "linuxlogo -l | tee -a /etc/motd"
